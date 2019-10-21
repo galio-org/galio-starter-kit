@@ -12,6 +12,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/galio-org/galio/master/assets/galio-logo.png">
   <p align="center">Galio is one of the coolest UI libraries you could ever use, licensed under MIT. Carefully crafted by developers for developers. Ready-made components, typography, and a gorgeous base theme that is easily adaptable to each project.</p>
+  <p align="center">This project was built with the main purpose of showcasing what Galio can be used for. The whole community started creating different screens for Galio, enabling other users to see how versatile and easy to use our library is. Join this big community of people building with Galio! </p>
 </p>
 
 ## Table of Contents
@@ -34,9 +35,12 @@ cd galio-starter-kit
 npm install or yarn install
 ```
 
-#### 2. Project testing
+#### 2. Starting the local server for your app
 Terminal cli:
 `expo r -c` or `npm start`
+
+### 3. Now a new browser window should appear:
+Click on 'run iOS' or 'run Android' 
 
 
 ## Documentation
@@ -52,9 +56,9 @@ The documentation for Galio is hosted at our [our website](https://galio.io)
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for Galio. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for galio-starter-kit. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of Galio. Check for your fork's master branch status and see if it's up to date with the upstream/master (our repository)
+1. Make sure that you are using the latest version of galio-starter-kit. Check for your fork's master branch status and see if it's up to date with the upstream/master (our repository)
 2. Provide us with reproductible steps for the issue.
 3. Some issues may be platform specific, so specifying what platform and if it's a simulator or a hardware device will help a lot.
 
