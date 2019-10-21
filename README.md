@@ -1,6 +1,13 @@
 # [galio-starter-kit](https://www.galio.io) ![GitHub package.json version](https://img.shields.io/github/package-json/v/galio-org/galio-starter-kit.svg) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=Galio,%20a%20free%20and%20beautiful%20UI%20framework%20https%3A//galio.io/%20%23reactnative%20%23react%20%23design%20%23developers%20%23freebie%20via%20%40galioframework)
 
-[![GitHub issues](https://img.shields.io/github/issues/galio-org/galio.svg?style=popout)](https://github.com/galio-org/galio)
+[![GitHub issues](https://img.shields.io/github/issues/galio-org/galio-starter-kit.svg?style=popout)](https://github.com/galio-org/galio-starter-kit/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/galio-org/galio-starter-kit.svg)](https://github.com/galio-org/galio-starter-kit/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/galio-org/galio-starter-kit.svg)](https://github.com/galio-org/galio-starter-kit/pulls)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/galio-org/galio-starter-kit.svg)](https://github.com/galio-org/galio-starter-kit/pulls?q=is%3Apr+is%3Aclosed)
+[![Gitter](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/galio-community)
+[![npm](https://img.shields.io/npm/dm/galio-framework.svg)](https://www.npmjs.com/package/galio-framework)
+[![Backers on Open Collective](https://opencollective.com/galio/backers/badge.svg)](#backers) 
+[![Sponsors on Open Collective](https://opencollective.com/galio/sponsors/badge.svg)](#sponsors) 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/galio-org/galio/master/assets/galio-logo.png">
@@ -56,4 +63,4 @@ We use GitHub Issues as the official bug tracker for Galio. Here are some advice
 * Licensed under MIT (<https://github.com/galio-org/galio-starter-kit/blob/master/LICENSE>)
 
 
-© 2019 [Galio](https://galio.io), made with ❤️ for apps.
+© 2019 [Galio](https://galio.io) made with ❤️ for apps.
