@@ -112,7 +112,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  /*
+
   Dashboard: {
     screen: Dashboard,
     navigationOptions: {
@@ -120,7 +120,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  */
+  
   News: {
     screen: News,
     navigationOptions: {
@@ -135,7 +135,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  /*
+ 
   Presentation: {
     screen: Presentation,
     navigationOptions: {
@@ -171,7 +171,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  */
+ 
 };
 
 const options = {
