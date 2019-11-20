@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import {
   Image, StyleSheet, ScrollView, SafeAreaView, Platform,
 } from 'react-native';
+import { createAppContainer } from 'react-navigation';
 import {
   createDrawerNavigator,
   DrawerItems,
-} from 'react-navigation';
+} from 'react-navigation-drawer';
 
 // screens
 import Article from './src/screens/Article';
@@ -83,7 +84,7 @@ MenuIcon.propTypes = {
   focused: PropTypes.bool,
 };
 
-const screens = {
+const screens = createDrawerNavigator({
   Home: {
     screen: Components,
     navigationOptions: {
@@ -172,7 +173,7 @@ const screens = {
     },
   },
   */
-};
+}, options);
 
 const options = {
   contentComponent: props => <GalioDrawer {...props} />,
@@ -198,6 +199,6 @@ const options = {
   },
 };
 
-const GalioApp = createDrawerNavigator(screens, options);
+const GalioApp = createAppContainer(screens);
 
 export default GalioApp;
