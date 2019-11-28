@@ -1,8 +1,6 @@
 import React from 'react';
-import {
-  StyleSheet, ScrollView, Platform,
-} from 'react-native';
-import { LinearGradient as Gradient } from 'expo';
+import { StyleSheet, ScrollView, Platform } from 'react-native';
+import { LinearGradient as Gradient } from 'expo-linear-gradient';
 import { Defs, LinearGradient, Stop } from 'react-native-svg';
 import { AreaChart } from 'react-native-svg-charts';
 import * as shape from 'd3-shape';
@@ -62,12 +60,17 @@ class Dashboard extends React.Component {
           style={styles.settings}
           onPress={() => this.props.navigation.openDrawer()}
         >
-          <Icon size={BASE_SIZE} name="heart" family="font-awesome" color={theme.COLORS.MUTED} />
+          <Icon
+            size={BASE_SIZE}
+            name="heart"
+            family="font-awesome"
+            color={theme.COLORS.MUTED}
+          />
         </Button>
       )}
       style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
     />
-  )
+  );
 
   renderStats = () => {
     const GradientStats = () => (
@@ -91,9 +94,15 @@ class Dashboard extends React.Component {
           curve={shape.curveNatural}
           style={[StyleSheet.absoluteFill]}
           contentInset={{
-            bottom: -BASE_SIZE * 0.15, right: -BASE_SIZE * 0.15, left: -BASE_SIZE * 0.15,
+            bottom: -BASE_SIZE * 0.15,
+            right: -BASE_SIZE * 0.15,
+            left: -BASE_SIZE * 0.15,
           }}
-          svg={{ strokeWidth: 1, stroke: 'rgba(0,0,0,0.2)', strokeDasharray: 4 }}
+          svg={{
+            strokeWidth: 1,
+            stroke: 'rgba(0,0,0,0.2)',
+            strokeDasharray: 4,
+          }}
         >
           <GradientStats />
         </AreaChart>
@@ -104,27 +113,41 @@ class Dashboard extends React.Component {
           curve={shape.curveNatural}
           style={{ height: BASE_SIZE * 10 }}
           contentInset={{
-            bottom: -BASE_SIZE * 0.21, right: -BASE_SIZE * 0.21, left: -BASE_SIZE * 0.21,
+            bottom: -BASE_SIZE * 0.21,
+            right: -BASE_SIZE * 0.21,
+            left: -BASE_SIZE * 0.21,
           }}
           svg={{ strokeWidth: BASE_SIZE * 0.1875, stroke: 'url(#gradient)' }}
         >
           <GradientStats />
         </AreaChart>
         <Block row space="evenly" style={{ marginTop: BASE_SIZE }}>
-          {statsTitles.map(title => <Text key={title} size={theme.SIZES.FONT * 0.85} muted>{title}</Text>)}
+          {statsTitles.map(title => (
+            <Text key={title} size={theme.SIZES.FONT * 0.85} muted>
+              {title}
+            </Text>
+          ))}
         </Block>
       </Block>
     );
-  }
+  };
 
   renderCard = (props, index) => {
     const gradientColors = index % 2 ? GRADIENT_BLUE : GRADIENT_PINK;
 
     return (
-      <Block row center card shadow space="between" style={styles.card} key={props.title}>
+      <Block
+        row
+        center
+        card
+        shadow
+        space="between"
+        style={styles.card}
+        key={props.title}
+      >
         <Gradient
           start={[0.45, 0.45]}
-          end={[0.90, 0.90]}
+          end={[0.9, 0.9]}
           colors={gradientColors}
           style={[styles.gradient, styles.left]}
         >
@@ -138,16 +161,23 @@ class Dashboard extends React.Component {
 
         <Block flex>
           <Text size={BASE_SIZE * 1.125}>{props.title}</Text>
-          <Text size={BASE_SIZE * 0.875} muted>{props.subtitle}</Text>
+          <Text size={BASE_SIZE * 0.875} muted>
+            {props.subtitle}
+          </Text>
         </Block>
         <Button style={styles.right}>
-          <Icon size={BASE_SIZE} name="minimal-right" family="Galio" color={COLOR_GREY} />
+          <Icon
+            size={BASE_SIZE}
+            name="minimal-right"
+            family="Galio"
+            color={COLOR_GREY}
+          />
         </Button>
       </Block>
     );
-  }
+  };
 
-  renderCards = () => cards.map((card, index) => this.renderCard(card, index))
+  renderCards = () => cards.map((card, index) => this.renderCard(card, index));
 
   render() {
     return (
@@ -159,9 +189,7 @@ class Dashboard extends React.Component {
         {this.renderStats()}
 
         {/* cards */}
-        <ScrollView style={{ flex: 1 }}>
-          {this.renderCards()}
-        </ScrollView>
+        <ScrollView style={{ flex: 1 }}>{this.renderCards()}</ScrollView>
       </Block>
     );
   }
@@ -174,7 +202,7 @@ const styles = StyleSheet.create({
     marginVertical: BASE_SIZE / 2,
     padding: BASE_SIZE,
     backgroundColor: COLOR_WHITE,
-    shadowOpacity: 0.40,
+    shadowOpacity: 0.4,
   },
   menu: {
     width: BASE_SIZE * 2,
