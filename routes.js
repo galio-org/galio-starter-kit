@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Image, StyleSheet, ScrollView, SafeAreaView, Platform,
+  Image,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+  Platform,
 } from 'react-native';
-import {
-  createDrawerNavigator,
-  DrawerItems,
-} from 'react-navigation';
+import { createDrawerNavigator, DrawerItems } from 'react-navigation';
 
 // screens
+import { Block, Icon, Text } from 'galio-framework';
 import Article from './src/screens/Article';
 import ArticleCover from './src/screens/ArticleCover';
 import Cards from './src/screens/Cards';
@@ -23,15 +25,24 @@ import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
 
 import theme from './src/theme';
-import { Block, Icon, Text } from 'galio-framework';
 
 const GalioDrawer = props => (
-  <SafeAreaView style={styles.drawer} forceInset={{ top: 'always', horizontal: 'never' }}>
+  <SafeAreaView
+    style={styles.drawer}
+    forceInset={{ top: 'always', horizontal: 'never' }}
+  >
     <Block space="between" row style={styles.header}>
-      <Block flex={0.3}><Image source={{ uri: 'http://i.pravatar.cc/100' }} style={styles.avatar} /></Block>
+      <Block flex={0.3}>
+        <Image
+          source={{ uri: 'http://i.pravatar.cc/100' }}
+          style={styles.avatar}
+        />
+      </Block>
       <Block flex style={styles.middle}>
         <Text size={theme.SIZES.FONT * 0.875}>Galio Framework</Text>
-        <Text muted size={theme.SIZES.FONT * 0.875}>React Native</Text>
+        <Text muted size={theme.SIZES.FONT * 0.875}>
+          React Native
+        </Text>
       </Block>
     </Block>
     <ScrollView>
@@ -88,61 +99,75 @@ const screens = {
     screen: Components,
     navigationOptions: {
       drawerLabel: 'Components',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
   Cards: {
     screen: Cards,
     navigationOptions: {
       drawerLabel: 'Cards',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
   Article: {
     screen: Article,
     navigationOptions: {
       drawerLabel: 'Article Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
   ArticleCover: {
     screen: ArticleCover,
     navigationOptions: {
       drawerLabel: 'Article Cover',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
-  /*
   Dashboard: {
     screen: Dashboard,
     navigationOptions: {
       drawerLabel: 'Dashboard screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
-  */
   News: {
     screen: News,
     navigationOptions: {
       drawerLabel: 'News Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
   OrderConfirmed: {
     screen: OrderConfirmed,
     navigationOptions: {
       drawerLabel: 'Order Confirmed',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
-  /*
   Presentation: {
     screen: Presentation,
     navigationOptions: {
       drawerLabel: 'Presentation Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => (
+        <MenuIcon name="flag" family="font-awesome" focused={props.focused} />
+      ),
     },
   },
+  /*
   Login: {
     screen: Login,
     navigationOptions: {

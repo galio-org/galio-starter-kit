@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Dimensions, StyleSheet, StatusBar, Image,
 } from 'react-native';
-import { LinearGradient } from 'expo';
+import { LinearGradient } from 'expo-linear-gradient';
 import Constants from 'expo-constants';
 // galio components
 import {
@@ -30,16 +30,40 @@ const Presentation = props => (
       style={styles.backgroundGradient}
     />
     <Block flex center style={styles.container}>
-      <Block flex middle style={{ justifyContent: 'flex-end', marginBottom: theme.SIZES.BASE * 2.5 }}>
-        <Text center size={theme.SIZES.FONT * 2.375} color={theme.COLORS.WHITE} style={{ marginBottom: theme.SIZES.BASE }}>
+      <Block
+        flex
+        middle
+        style={{
+          justifyContent: 'flex-end',
+          marginBottom: theme.SIZES.BASE * 2.5,
+        }}
+      >
+        <Text
+          center
+          size={theme.SIZES.FONT * 2.375}
+          color={theme.COLORS.WHITE}
+          style={{ marginBottom: theme.SIZES.BASE }}
+        >
           Check this out
         </Text>
-        <Text center size={theme.SIZES.FONT * 0.875} color={theme.COLORS.WHITE} style={{ marginBottom: theme.SIZES.BASE * 1.875, paddingHorizontal: theme.SIZES.BASE * 2 }}>
-          You should totally read this stuf, like
-          seriously all yo homies love sneak dissing
-          but at least u’re true, right?
+        <Text
+          center
+          size={theme.SIZES.FONT * 0.875}
+          color={theme.COLORS.WHITE}
+          style={{
+            marginBottom: theme.SIZES.BASE * 1.875,
+            paddingHorizontal: theme.SIZES.BASE * 2,
+          }}
+        >
+          You should totally read this stuf, like seriously all yo homies love
+          sneak dissing but at least u’re true, right?
         </Text>
-        <Button size="large" color="transparent" round onPress={() => props.navigation.openDrawer()}>
+        <Button
+          size="large"
+          color="transparent"
+          round
+          onPress={() => props.navigation.openDrawer()}
+        >
           Get Started
         </Button>
       </Block>
