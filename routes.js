@@ -144,13 +144,13 @@ const screens = createDrawerNavigator({
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  Login: {
-    screen: Login,
-    navigationOptions: {
-      drawerLabel: 'Login Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },*/
+  // Login: {
+  //   screen: Login,
+  //   navigationOptions: {
+  //     drawerLabel: 'Login Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },*/
   Register: {
     screen: Register,
     navigationOptions: {
