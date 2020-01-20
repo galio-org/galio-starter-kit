@@ -7,10 +7,10 @@ import {
   Platform,
 } from 'react-native';
 // galio component
-import {
-  Block, Button, Input, Text, NavBar,
-} from 'galio-framework';
+import { Block, Button, Input, Text, NavBar } from 'galio-framework';
 import theme from '../theme';
+
+import SignUpInputs from '../organisms/SignUpInputs';
 
 const { height, width } = Dimensions.get('window');
 
@@ -21,11 +21,11 @@ class Login extends React.Component {
     user: '-',
     email: '-',
     password: '-',
-  }
+  };
 
   handleChange = (name, value) => {
     this.setState({ [name]: value });
-  }
+  };
 
   render() {
     const { navigation } = this.props;
@@ -43,47 +43,33 @@ class Login extends React.Component {
           <SignUpSocial />
 
           <Block flex={2} center space="between">
-            <Block flex={2}>
-              <Input
-                rounded
-                placeholder="Username"
-                autoCapitalize="none"
-                style={{ width: width * 0.9 }}
-                onChangeText={text => this.handleChange('user', text)}
-              />
-              <Input
-                rounded
-                type="email-address"
-                placeholder="Email"
-                autoCapitalize="none"
-                style={{ width: width * 0.9 }}
-                onChangeText={text => this.handleChange('email', text)}
-              />
-              <Input
-                rounded
-                password
-                viewPass
-                placeholder="Password"
-                style={{ width: width * 0.9 }}
-                onChangeText={text => this.handleChange('password', text)}
-              />
-            </Block>
+            <SignUpInputs />
             <Block flex middle>
               <Button
                 round
                 color="error"
-                onPress={() => Alert.alert(
-                  'Sign up action',
-                  `
-                  Username: ${user}
-                  Email: ${email}
-                  Password: ${password}`,
-                )}
+                onPress={() =>
+                  Alert.alert(
+                    'Sign up action',
+                    `
+Username: ${user}
+Email: ${email}
+Password: ${password}`
+                  )
+                }
               >
                 Sign up
               </Button>
-              <Button color="transparent" shadowless onPress={() => navigation.navigate('Login')}>
-                <Text center color={theme.COLORS.ERROR} size={theme.SIZES.FONT * 0.75}>
+              <Button
+                color="transparent"
+                shadowless
+                onPress={() => navigation.navigate('Login')}
+              >
+                <Text
+                  center
+                  color={theme.COLORS.ERROR}
+                  size={theme.SIZES.FONT * 0.75}
+                >
                   Already have an account? Sign In
                 </Text>
               </Button>

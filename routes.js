@@ -158,21 +158,22 @@ const screens = createDrawerNavigator({
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  // Registerv2: {
-  //   screen: Registerv2,
-  //   navigationOptions: {
-  //     drawerLabel: 'Register Screen v2',
-  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-  //   },
-  // },
-  // Grid: {
-  //   screen: Grid,
-  //   navigationOptions: {
-  //     drawerLabel: 'Grid Screen',
-  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-  //   },
-  // },
-  
+  /*
+  Registerv2: {
+    screen: Registerv2,
+    navigationOptions: {
+      drawerLabel: 'Register Screen v2',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Grid: {
+    screen: Grid,
+    navigationOptions: {
+      drawerLabel: 'Grid Screen',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  */
 }, options);
 
 const options = {
