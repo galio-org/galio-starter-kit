@@ -63,8 +63,8 @@ export default class Components extends React.Component {
                 <Button color="warning" style={styles.button} round>
                   Warning
                 </Button>
-                <Button color="error" style={styles.button} round>
-                  Error
+                <Button color="danger" style={styles.button} round>
+                  Danger
                 </Button>
               </Block>
             </Block>
