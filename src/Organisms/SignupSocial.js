@@ -22,7 +22,7 @@ const SignUpSocial = () => {
       </Text>
       <Block row center space="between" style={{ marginVertical: theme.SIZES.BASE }}>
           <Block flex middle right>
-          <Button
+            <Button
               round
               onlyIcon
               iconSize={theme.SIZES.BASE * 1.625}
@@ -36,7 +36,7 @@ const SignUpSocial = () => {
           />
           </Block>
           <Block flex middle center>
-          <Button
+            <Button
               round
               onlyIcon
               iconSize={theme.SIZES.BASE * 1.625}
@@ -50,7 +50,7 @@ const SignUpSocial = () => {
           />
           </Block>
           <Block flex middle left>
-          <Button
+            <Button
               round
               onlyIcon
               iconSize={theme.SIZES.BASE * 1.625}
